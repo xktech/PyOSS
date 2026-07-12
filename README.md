@@ -31,10 +31,10 @@ PyOSS has core fundimentals such as:
 3. Install requirements
 
 **Step 1:**
-Install Python
-[INSTALL PYTHON ON WINDOWS 11](https://www.youtube.com/watch?v=e70ykVBazAg)
-[INSTALL PYTHON ON UBUNTU/DEBAIN](https://www.youtube.com/watch?v=E06o4MGTd7g)
-[INSTALL PYTHON ON MAC OS](https://www.youtube.com/watch?v=utVZYVJSTZA)
+Install Python:
+- [INSTALL PYTHON ON WINDOWS 11](https://www.youtube.com/watch?v=e70ykVBazAg)
+- [INSTALL PYTHON ON UBUNTU/DEBAIN](https://www.youtube.com/watch?v=E06o4MGTd7g)
+- [INSTALL PYTHON ON MAC OS](https://www.youtube.com/watch?v=utVZYVJSTZA)
 
 **Step 2:**
 To create a **virtual enviroment**, run this command in your project folder (inside Powershell / bash)
