@@ -10,6 +10,7 @@ PyOSS has core fundimentals such as:
 **MENTIONS**
 - The notes system does NOT save to the PyOSS file system and is currently broken (12/07/26)
 - currently buggy. Not tested on other machines
+- **WINDOWS ONLY FOR NOW!**
 
 **MUSIC**
 - You need to have spotify open
