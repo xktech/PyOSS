@@ -10,6 +10,7 @@ from core.login import register_user
 from core.home import homepage
 from assets.sounds.sounds import success_sound
 from assets.sounds.sounds import error_sound
+import core.config as config
 
 
 def loginpage():
@@ -48,6 +49,7 @@ def loginpage():
                     stored_hash.encode("utf-8")
                 ):
                     success_sound()
+                    config.username = username
                     homepage(username)
                 else:
                     error_sound()
