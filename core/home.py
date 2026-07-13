@@ -12,7 +12,7 @@ from core.utils import new_window
 
 un = config.username
 
-def homepage():
+def homepage(username):
     while True:
         render_home()
 

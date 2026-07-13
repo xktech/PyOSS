@@ -1,9 +1,0 @@
-{
-    "home": {
-        "notes.txt": "Hello World!",
-        "games": {},
-        "system": {
-            "config.sys": "darkmode=true"
-        }
-    }
-}

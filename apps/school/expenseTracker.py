@@ -110,7 +110,7 @@ def expenseTracker(): # Added from Student Dashboard
                 try:
                     if len(str(cell.value)) > max_length:
                         max_length = len(str(cell.value))
-                except:
+                except Exception as e:
                     pass
 
             adjusted_width = max_length + 4

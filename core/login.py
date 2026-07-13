@@ -2,6 +2,7 @@ import json
 import os
 import getpass
 import core.config as config
+import bcrypt
 
 USERS_FILE = "data/users/users.json"
 def load_users():
@@ -32,14 +33,15 @@ def register_user():
         break
 
     while True:
-        password = input("Create password: ").strip()
+        password = getpass.getpass("Create password: ").strip()
 
         if len(password) < 3:
             print("Password too short (min 3 chars).")
             continue
         break
 
-    users[username] = password
+    hashed = bcrypt.hashpw(password.encode("utf-8"), bcrypt.gensalt())
+    users[username] = hashed.decode("utf-8")
     save_users(users)
 
     print(f"\nUser '{username}' created successfully!")

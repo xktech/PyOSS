@@ -8,6 +8,9 @@ from core.utils import new_window
 import platform
 import psutil
 
+
+un = config.username
+
 def systemSpecs():
     new_window(config.username)
     while True:
@@ -23,11 +26,11 @@ def systemSpecs():
         break
 
 def shutdown():
-    new_window()
+    new_window(un)
     print_centered(Fore.RED + "Shutting down..")
     print_centered()
     time.sleep(1)
-    print_centered(Fore.CYAN + f"Goodbye {config.username}!")
+    print_centered(Fore.CYAN + f"Goodbye {config.username}!") # TODO: Fix
     print_centered()
     time.sleep(0.5)
     sys.exit(0)

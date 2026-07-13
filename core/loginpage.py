@@ -1,4 +1,5 @@
 import getpass
+import bcrypt
 
 from core.utils import new_window
 from core.utils import print_centered
@@ -27,8 +28,8 @@ def loginpage():
         choice = input(center_input_prompt("> ")).strip()
 
         if choice == "new":
-            user = register_user()
-            homepage(user)
+            username = register_user()
+            homepage(username)
 
         elif choice == "q":
             break
@@ -40,9 +41,14 @@ def loginpage():
             if username in users:
                 password = getpass.getpass(center_input_prompt("Password: "))
 
-                if users[username] == password:
+                stored_hash = users[username]
+
+                if bcrypt.checkpw(
+                    password.encode("utf-8"),
+                    stored_hash.encode("utf-8")
+                ):
                     success_sound()
-                    homepage()
+                    homepage(username)
                 else:
                     error_sound()
                     print("Wrong password.")
