@@ -1,0 +1,11 @@
+{
+    "home": {
+        "notes.txt": "",
+        "games": {},
+        "system": {
+            "config.sys": "lightmode=false\nCurrent Ram = 16GB\nHello There",
+            "pagefile.sys": ""
+        },
+        "m": "six sevenn\n"
+    }
+}

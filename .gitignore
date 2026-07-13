@@ -1,7 +1,10 @@
-.env
+/env/.env
+/env
 /Old
 /test
 /users
 /venv
 .cache
 users.json
+.gitignore
+/logs
