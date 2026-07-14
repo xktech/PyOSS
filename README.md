@@ -8,8 +8,7 @@ PyOSS has core features such as:
 
 
 **MENTIONS**
-- I got feedback. I am now splitting the main.py file up into sub sections. The readme is the only thing
-that will be updated.
+- Working on adding new games and QOL features
 - The notes system does NOT save to the PyOSS file system and is currently broken (12/07/26)
 - currently buggy. Not tested on other machines
 - **WINDOWS ONLY FOR NOW!**
