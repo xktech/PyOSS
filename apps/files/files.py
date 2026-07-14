@@ -1,6 +1,8 @@
 import os
 import json
 import time
+from prompt_toolkit import prompt
+from prompt_toolkit.completion import WordCompleter
 
 import core.config as config
 from core.utils import new_window
@@ -8,6 +10,7 @@ from core.utils import new_window
 
 USER_DIR = "users"
 
+print(config.username)
 
 def get_save_file():
     os.makedirs(USER_DIR, exist_ok=True)
@@ -54,7 +57,6 @@ def save_filesystem(filesystem):
 
 def files():
     new_window(config.username)
-
     filesystem = load_filesystem()
 
     path = ["home"]
@@ -78,10 +80,26 @@ def files():
     print("ls | cd <folder> | cd .. | pwd | cat <file>")
     print("mkdir <folder> | touch <file> | edit <file>")
     print("rm <file/folder> | exit")
+    print
 
-
+    COMMANDS = [
+        "exit",
+        "ls",
+        "pwd",
+        "cd",
+        "cat",
+        "edit",
+        "mkdir",
+        "touch",
+        "rm",
+    ]
     while True:
-        command = input(f"{current_path()} > ").strip()
+        completer = WordCompleter(COMMANDS, ignore_case=True, sentence=True)
+        command = prompt(
+            f"{current_path()} > ",
+            completer=completer,
+            complete_while_typing=False
+        ).strip()
 
         if not command:
             continue
@@ -159,6 +177,7 @@ def files():
 
         # CREATE FOLDER
         elif cmd == "mkdir":
+            print("inside mkdir")
 
             if len(args) < 2:
                 print("Usage: mkdir <folder>")

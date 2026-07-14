@@ -30,6 +30,9 @@ def loginpage():
 
         if choice == "new":
             username = register_user()
+
+            config.username = username
+
             homepage(username)
 
         elif choice == "q":
@@ -50,6 +53,7 @@ def loginpage():
                 ):
                     success_sound()
                     config.username = username
+                    print("config.username =", config.username)
                     homepage(username)
                 else:
                     error_sound()

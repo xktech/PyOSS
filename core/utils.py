@@ -1,5 +1,6 @@
 import shutil
 import winsound
+from colorama import Fore, Style
 
 # NUMBER
 def get_number(prompt):
@@ -38,7 +39,7 @@ def center_input_prompt(text=""):
 # SCREEN
 def new_window(username):
     print("\033c", end="")  # Clear screen
-
+    print(Style.RESET_ALL)
 
 # SOUNDS
 def error_sound():

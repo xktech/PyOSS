@@ -32,5 +32,6 @@ def shutdown():
     time.sleep(1)
     print_centered(Fore.CYAN + f"Goodbye {config.username}!") # TODO: Fix
     print_centered()
+    print(Style.RESET_ALL) # Changed the color back to default instead of keeping blue
     time.sleep(0.5)
     sys.exit(0)
