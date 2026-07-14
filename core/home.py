@@ -1,8 +1,8 @@
 import core.config as config
-from apps.calculator import calculator
-from apps.music import music
+from apps.calculator.calculator import calculator
+from apps.music.music import music
 from Old.files import files
-from apps.notes import notes
+from apps.notes.notes import notes
 from apps.games.menu import games_menu
 from apps.school.school import school_menu
 from core.menu import render_home
@@ -12,7 +12,7 @@ from core.utils import new_window
 
 un = config.username
 
-def homepage(username):
+def homepage(un):
     while True:
         render_home()
 
