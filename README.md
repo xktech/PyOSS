@@ -1,4 +1,4 @@
-PyOSS has core fundimentals such as:
+PyOSS has core features such as:
 1. A login / logout system
 2. A user-specific file system
 3. Mini Games
