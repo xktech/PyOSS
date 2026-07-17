@@ -50,11 +50,6 @@ def homepage(un):
         elif homeChoice == "music":
             music()
             new_window(un)
-        
-        elif homeChoice == "quiz":
-            quiz()
-            new_window(un)
-
 
         # EXIT 
         elif homeChoice == "logout":

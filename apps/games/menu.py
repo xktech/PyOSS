@@ -4,6 +4,7 @@ from .pong import pong
 from .higher_lower import higher_lower_game
 from .text_adventure import text_adventure
 from .quiz import quiz
+from .email import mail
 
 
 def render_games():
@@ -14,7 +15,8 @@ def render_games():
     print("4. Pong")
     print("5. Text Adventure (WIP. NOT DONE)")
     print("6. QUIZ")
-    print("7. Type 'back' to return")
+    print("7. Email Game (HORROR)")
+    print("8. Type 'back' to return")
     print("-" * 38)
 
 
@@ -39,7 +41,9 @@ def games_menu():
         elif gameChoice == "5":
             text_adventure()
             pass
-        elif gameChoice():
+        elif gameChoice == "6":
             quiz()
+        elif gameChoice == "7":
+            mail()
         elif gameChoice == "back":
             break
